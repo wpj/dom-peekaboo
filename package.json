@@ -1,0 +1,55 @@
+{
+  "name": "dom-peekaboo",
+  "description": "Functions for tracking a DOM node's intersection with the viewport.",
+  "author": "Wyatt Johnston <w@wyatt.page>",
+  "license": "MIT",
+  "version": "0.0.0",
+  "repository": "wpj/dom-peekaboo",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@babel/register": "^7.11.5",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/lodash.throttle": "^4.1.6",
+    "cross-env": "^7.0.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "lodash.debounce": "^4.0.8",
+    "microbundle": "^0.12.3",
+    "playwright": "^1.3.0",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.26.11",
+    "typescript": "^4.0.2",
+    "uvu": "^0.3.3"
+  },
+  "dependencies": {
+    "lodash.throttle": "^4.1.1"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "microbundle build",
+    "prepublishOnly": "npm build",
+    "test": "cross-env NODE_ENV=test uvu tests -r ./tests/setup/babel-register -i setup",
+    "typecheck": "tsc --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,css,md}": "prettier --write"
+  }
+}
