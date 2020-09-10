@@ -3,7 +3,7 @@
   "description": "Functions for tracking a DOM node's intersection with the viewport.",
   "author": "Wyatt Johnston <w@wyatt.page>",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": "wpj/dom-peekaboo",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
