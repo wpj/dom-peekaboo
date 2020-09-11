@@ -1,6 +1,6 @@
 # dom-peekaboo
 
-![CI status](https://github.com/wpj/dom-peekaboo/workflows/CI/badge.svg)
+[![CI Status](https://github.com/wpj/dom-peekaboo/workflows/CI/badge.svg)](https://github.com/wpj/dom-peekaboo/actions)
 
 Functions for tracking a DOM node's intersection with the viewport.
 
